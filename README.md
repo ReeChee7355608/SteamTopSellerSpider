@@ -9,7 +9,7 @@
 
    4.运行程序
    
-   Tips:如果使用源码,请先下载仓库里的requirements.txt,并在当前目录运行pip install -r requirements.txt
+   Tips:如果使用源码,请先安装lxml (python -m pip install lxml==3.4.0)
 
 ## 常见错误
   ### 1.程序假死
@@ -18,7 +18,7 @@
 
   然后确认当前目录能否写入文件
 
-  最后确认[这个网站](https://store.steampowered.com/feeds/weeklytopsellers.xml)能否访问
+  最后确认[这个XML](https://store.steampowered.com/feeds/weeklytopsellers.xml)能否访问
 
   如果都不行请提交issues或[发邮件](mailto:reechee7355608@gmail.com)
 
@@ -30,14 +30,12 @@
 
   如果上面都没有你的问题
 
-  #### 1.将wget的静默参数(-q和-b)删除,查看报错情况
+  #### 1.将wget的静默参数(-q)删除,查看报错情况
 
   #### 2.如果显示结果出错或其它情况,请提交issues或[发邮件](mailto:reechee7355608@gmail.com)
 
 ## 已知BUG
-  显示"™"等特殊字符时会出现乱码 (@EA)
+  UNKNOWN(欢迎提交BUG!)
 
 ## 开源协议
   [GPL 3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)  
-  
-  [GPL 3.0 中文版 (仅供参考,只有英文原版才有法律效力)](https://jxself.org/translations/gpl-3.zh.shtml)
