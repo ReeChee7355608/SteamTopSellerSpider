@@ -8,16 +8,13 @@ def date():
     for temp in root:
         print(temp[0].text)
     print("更新时间:",root[0][4].text)
-if os.path.exists("wget.exe"):
-    # GET
-    os.system("wget.exe -q http://store.steampowered.com/feeds/weeklytopsellers.xml")
-    date()
-    os.system("del /f /q weeklytopsellers.xml")
-    os.system("del /f /q .wget-hsts")
-    os.system("pause")
-else:
-    print("404 ERROR CODE 请检查该目录是否有wget.exe !")
-    os.system("pause")
+try:
+    os.system("wget -q http://store.steampowered.com/feeds/weeklytopsellers.xml")
+except:
+    print("404-l ERROR CODE 没有找到wget !")
+date()
+os.system("rm -f ./weeklytopsellers.xml")
+os.system("rm -f ./.wget-hsts")
 ######################################
 #      Steam Top Seller Spider       #
 #               1.1                  #
